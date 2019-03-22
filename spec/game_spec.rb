@@ -16,5 +16,17 @@ describe Game do
         game.attack(rob)
       end
     end
-  
-end
+    describe '#current_turn' do
+      it 'starts as player 1' do
+        expect(game.current_turn).to eq bob
+      end
+    end
+
+    describe '#switch_turns' do
+      it 'switches turns' do
+        game.switch_turns
+        expect(game.current_turn).to eq rob
+      end
+    end
+  end
+
